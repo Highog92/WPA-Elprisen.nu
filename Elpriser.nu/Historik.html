@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elpriser.nu</title>
+    <title>Historik</title>
     <link rel="stylesheet" href="/Elpriser.nu/CSS/Main.css">
-    <link rel="stylesheet" href="/Elpriser.nu/CSS/PowerCircle.css">
-    <script type="module" src="/Elpriser.nu/Javascript/Index.js" defer></script>
+    <link rel="stylesheet" href="/Elpriser.nu/CSS/Historik.css">
+    <script src="/Elpriser.nu/Javascript/Historik.js" type="module" defer></script>
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="/Elpriser.nu/index.html">
-                <img src="/Elpriser.nu/Assets/mainIcon.svg" alt="Logo">
-            </a>
+            <ul>
+                <a href="/Elpriser.nu/index.html">
+                    <img src="/Elpriser.nu/Assets/mainIcon.svg" alt="Logo">
+                </a>
+            </ul>
             <ul>
                 <li><a href="/Elpriser.nu/index.html">Lige Nu</a></li>
                 <li><a href="/Elpriser.nu/Overview.html">Oversigt</a></li>
@@ -32,26 +34,30 @@
             </a>
         </div>
         <div>
-            <h2>Elprisen lige nu</h2>
+            <h2>Historik</h2>
         </div>
-        <div class="outerCircle">
-            <div class="middleCircle">
-                <div class="innerCircle">
-                    <h2 id="powerPrice"><span>${nu pris}</span></h2>
-                    <!-- <h2 id="prKwh"><span>PR. KWH</span></h2> -->
-                </div>
+        <section class="historyPrices">
+
+            <div class="historyDate">
+                <p>${dato}</p>
+                <input type="date">
             </div>
-        </div>
-        <div class="timePeriod">
-                <span>
-                    ${tid} 
-                </span>
-        </div>
+            <p>Priser ${dato}</p>
+            <div class="historyBars">
+                <p>
+                    kl. 19.00
+                </p>
+                <p>
+                    0.524 kr
+                </p>
+            </div>
+        </section>
+
     </main>
 
     <footer>
         <p>Priserne er <span>ex.moms</span> og afgifter</p>
-        <p>Du vises lige priserne for <span>${Øst Danmark}</span></p>
+        <p>Du vises lige priserne for <span>Øst Danmark</span></p>
     </footer>
 </body>
 

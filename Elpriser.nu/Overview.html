@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oversigt</title>
+    <script src=""></script>
+    <link rel="stylesheet" href="/Elpriser.nu/CSS/Main.css">
+    <link rel="stylesheet" href="/Elpriser.nu/CSS/Overview.css">
+    <script src="/Elpriser.nu/Javascript/Overview.js" type="module" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/Elpriser.nu/index.html">
+                <img src="/Elpriser.nu/Assets/mainIcon.svg" alt="Logo">
+            </a>
+            <ul>
+                <li><a href="/Elpriser.nu/index.html">Lige Nu</a></li>
+                <li><a href="/Elpriser.nu/Overview.html">Oversigt</a></li>
+                <li><a href="/Elpriser.nu/Historik.html">Historik</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="optionGear">
+            <a href="/Elpriser.nu/Options.html">
+                <img src="/Elpriser.nu/Assets/OptionGear.svg" alt="Options">
+            </a>
+        </div>
+        <div>
+            <h2>Oversigt</h2>
+        </div>
+        <section class="hiLowCircles">
+            <div class="outerCircle">
+                <div class="middleCircle">
+                    <div class="innerCircle">
+                        <p id="lowPrice">${lav pris} kr</p>
+                        <p class="time">PR. KWH</p>
+                    </div>
+                </div>
+            </div>
+            <div class="outerCircle">
+                <div class="middleCircle">
+                    <div class="innerCircle">
+                        <p id="hiPrice">${høj pris} kr</p>
+                        <p class="time">PR. KWH</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="historyPrices">
+            <div>
+                <p class="lowPrice">Laveste Pris</p>
+            </div>
+            <div>
+                <p class="hiPrice">Højeste pris</p>
+            </div>
+        </section>
+
+        <section id="history">
+            <!-- <div class="historyBars">
+                <p>
+                    ${time}
+                </p>
+                <p>
+                    ${price}
+                </p>
+            </div> -->
+        </section>
+    </main>
+
+    <footer>
+        <p>Priserne er <span>ex.moms</span> og afgifter</p>
+        <p>Du vises lige priserne for <span>Øst Danmark</span></p>
+    </footer>
+</body>
+
+</html>
