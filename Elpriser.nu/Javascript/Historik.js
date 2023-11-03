@@ -79,18 +79,16 @@ async function getHistoryData() {
         `
     })
 
-    let lowestPrice = data.reduce((min, current) => (current.DKK_per_kWh < min.DKK_per_kWh ? current : min))
-    let lowprice = document.querySelector('#lowPrice')
-    lowprice.innerHTML = lowestPrice.DKK_per_kWh
+    // let lowestPrice = data.reduce((min, current) => (current.DKK_per_kWh < min.DKK_per_kWh ? current : min))
+    // let lowprice = document.querySelector('#lowPrice')
+    // lowprice.innerHTML = lowestPrice.DKK_per_kWh
 
-    let highestPrice = data.reduce((max, current) => (current.DKK_per_kWh > max.DKK_per_kWh ? current : max))
-    let hiPrice = document.querySelector('#hiPrice')
-    hiPrice.innerHTML = highestPrice.DKK_per_kWh
+    // let highestPrice = data.reduce((max, current) => (current.DKK_per_kWh > max.DKK_per_kWh ? current : max))
+    // let hiPrice = document.querySelector('#hiPrice')
+    // hiPrice.innerHTML = highestPrice.DKK_per_kWh
 
-
-
-    console.log("Højeste pris", highestPrice);
-    console.log("Laveste pris", lowestPrice);
+    // console.log("Højeste pris", highestPrice);
+    // console.log("Laveste pris", lowestPrice);
 
     console.log(data);
 }

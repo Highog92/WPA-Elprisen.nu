@@ -11,14 +11,14 @@
     "categories": "electricity prices",
     "screenshots": [
         {
-            "src": "/Elpriser.nu/Assets/Screenshots/ScreenshotIndex.PNG",
+            "src": "./Assets/Screenshots/ScreenshotIndex.PNG",
             "sizes": "387x762",
             "type": "image/PNG",
             "form_factor": "wide",
             "label": "Homescreen of Elpriser.nu"
         },
         {
-            "src": "/Elpriser.nu/Assets/Screenshots/ScreenshotIndex.PNG",
+            "src": "./Assets/Screenshots/ScreenshotIndex.PNG",
             "sizes": "387x762",
             "type": "image/PNG",
             "form_factor": "wide",
@@ -27,72 +27,72 @@
     ],
     "icons": [
         {
-            "src": "/Elpriser.nu/Assets/android/android-launchericon-48-48.png",
+            "src": "./Assets/android/android-launchericon-48-48.png",
             "sizes": "48x48",
             "type": "image/png"
         },
         {
-            "src": "/Elpriser.nu/Assets/android/android-launchericon-72-72.png",
+            "src": "./Assets/android/android-launchericon-72-72.png",
             "sizes": "72x72",
             "type": "image/png"
         },
         {
-            "src": "/Elpriser.nu/Assets/android/android-launchericon-96-96.png",
+            "src": "./Assets/android/android-launchericon-96-96.png",
             "sizes": "96x96",
             "type": "image/png"
         },
         {
-            "src": "/Elpriser.nu/Assets/android/android-launchericon-144-144.png",
+            "src": "./Assets/android/android-launchericon-144-144.png",
             "sizes": "144x144",
             "type": "image/png"
         },
         {
-            "src": "/Elpriser.nu/Assets/android/android-launchericon-192-192.png",
+            "src": "./Assets/android/android-launchericon-192-192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/Elpriser.nu/Assets/android/android-launchericon-512-512.png",
+            "src": "./Assets/android/android-launchericon-512-512.png",
             "sizes": "512x512",
             "type": "image/png"
         },
         {
-            "src": "/Elpriser.nu/Assets/ios/16.png",
+            "src": "./Assets/ios/16.png",
             "sizes": "16x16",
             "type": "image/png"
         },
         {
-            "src": "/Elpriser.nu/Assets/ios/20.png",
+            "src": "./Assets/ios/20.png",
             "sizes": "20x20",
             "type": "image/png"
         },
         {
-            "src": "/Elpriser.nu/Assets/ios/29.png",
+            "src": "./Assets/ios/29.png",
             "sizes": "29x29",
             "type": "image/png"
         },
         {
-            "src": "/Elpriser.nu/Assets/ios/32.png",
+            "src": "./Assets/ios/32.png",
             "sizes": "32x32",
             "type": "image/png"
         },
         {
-            "src": "/Elpriser.nu/Assets/ios/40.png",
+            "src": "./Assets/ios/40.png",
             "sizes": "40x40",
             "type": "image/png"
         },
         {
-            "src": "/Elpriser.nu/Assets/ios/50.png",
+            "src": "./Assets/ios/50.png",
             "sizes": "50x50",
             "type": "image/png"
         },
         {
-            "src": "/Elpriser.nu/Assets/ios/57.png",
+            "src": "./Assets/ios/57.png",
             "sizes": "57x57",
             "type": "image/png"
         },
         {
-            "src": "/Elpriser.nu/Assets/ios/58.png",
+            "src": "./Assets/ios/58.png",
             "sizes": "58x58",
             "type": "image/png"
         }
