@@ -1,9 +1,8 @@
 .hiLowCircles {
     display: flex;
     flex-direction: row;
-
+    gap: 100px;
 }
-
 
 .outerCircle {
     display: flex;
@@ -57,16 +56,27 @@
     padding: 0;
 }
 
+.Kwhtime {
+    margin: 0;
+}
 
 
-.hiPrice,
-.lowPrice {
+
+
+#lowPrice,
+#hiPrice {
+    padding: 0;
+    margin: 0;
+}
+
+.highestPrice,
+.lowestPrice {
     display: flex;
     flex-direction: row;
-    height: 3rem;
+    /* height: 3rem; */
     margin-bottom: 15px;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 
@@ -81,4 +91,56 @@
     border-radius: 7px;
     box-shadow: 0px 0px 9px 1px rgba(255, 255, 255, 0.096);
     margin: 15px;
+}
+
+@media (min-width: 320px) {
+
+    .hiLowCircles {
+        gap: 20px;
+    }
+
+    .outerCircle {
+        width: calc(100vw / 3);
+        height: calc(100vw / 3);
+
+    }
+
+    .middleCircle {
+        width: calc(100vw / 3.5);
+        height: calc(100vw / 3.5);
+
+    }
+
+    .innerCircle {
+        width: calc(100vw / 3.8);
+        height: calc(100vw / 3.8);
+
+    }
+}
+
+@media (min-width: 800px) {
+
+    .hiLowCircles {
+        gap: 200px;
+    }
+
+
+    .outerCircle {
+        width: calc(100vw / 4);
+        height: calc(100vw / 4);
+    }
+
+    .middleCircle {
+        width: calc(100vw / 4.5);
+        height: calc(100vw / 4.5);
+
+    }
+
+    .innerCircle {
+        width: calc(100vw / 4.8);
+        height: calc(100vw / 4.8);
+
+    }
+
+
 }

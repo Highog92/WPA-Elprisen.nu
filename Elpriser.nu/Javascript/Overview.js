@@ -75,7 +75,7 @@ async function getOverviewData() {
            kl. ${item.time_start.slice(11, 16)}
         </p>
         <p style="${priceColors(item.DKK_per_kWh)}">
-            ${item.DKK_per_kWh} kr.
+            ${item.DKK_per_kWh.toFixed(3)} kr.
         </p>
     </div>
         `

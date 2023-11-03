@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elpriser.nu</title>
+    <link rel="stylesheet" href="/Elpriser.nu/CSS/Main.css">
+    <link rel="stylesheet" href="/Elpriser.nu/CSS/Historik.css">
+    <!-- <link rel="stylesheet" href="/Elpriser.nu/CSS/Options.css"> -->
+    <link rel="stylesheet" href="/Elpriser.nu/CSS/PcDashboard.css">
+    <link rel="stylesheet" href="/Elpriser.nu/CSS/Overview.css">
+    <!-- <link rel="stylesheet" href="/Elpriser.nu/CSS/PowerCircle.css"> -->
+    <link rel="manifest" href="/Manifest.json">
+    <script src="/Elpriser.nu/Javascript/Historik.js" type="module" defer></script>
+    <script src="/Elpriser.nu/Javascript/Overview.js" type="module" defer></script>
+    <script src="/Elpriser.nu/Javascript/Index.js" type="module" defer></script>
+    <script src="/sw.js"></script>
+</head>
+
+<body>
+    <main class="pcDashboard">
+
+        <section class="overview">
+            <div>
+                <h2>Oversigt</h2>
+            </div>
+            <section class="hiLowCircles">
+                <div class="outerCircle">
+                    <div class="middleCircle">
+                        <div class="innerCircle">
+                            <p id="lowPrice">${lav pris} kr</p>
+                            <p class="time">PR. KWH</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="outerCircle">
+                    <div class="middleCircle">
+                        <div class="innerCircle">
+                            <p id="hiPrice">${høj pris} kr</p>
+                            <p class="time">PR. KWH</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-------------------------------------------------  -->
+
+            <section class="rightNow">
+                <div>
+                    <h2>Elprisen lige nu</h2>
+                </div>
+                <div class="outerCircle">
+                    <div class="middleCircle">
+                        <div class="innerCircle">
+                            <h2 id="powerPrice"><span>${nu pris}</span></h2>
+                            <!-- <h2 id="prKwh"><span>PR. KWH</span></h2> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="timePeriod">
+                    <span>
+                        ${tid}
+                    </span>
+                </div>
+                <section class="historyPrices">
+                    <div>
+                        <p class="lowPrice">Laveste Pris</p>
+                    </div>
+                    <div>
+                        <p class="hiPrice">Højeste pris</p>
+                    </div>
+                </section>
+
+                <section id="history">
+                    <!-- <div class="historyBars">
+                    <p>
+                        ${time}
+                    </p>
+                    <p>
+                        ${price}
+                    </p>
+                </div> -->
+                </section>
+            </section>
+
+            <!-------------------------------------------------  -->
+
+            <section class="historik">
+                <div>
+                    <h2>Historik</h2>
+                </div>
+                <section class="historyPrices">
+
+                    <div class="historyDate">
+                        <p>${dato}</p>
+                        <input type="date">
+                    </div>
+                    <p>Priser ${dato}</p>
+                    <div class="historyBars">
+                        <p>
+                            kl. 19.00
+                        </p>
+                        <p>
+                            0.524 kr
+                        </p>
+                    </div>
+                </section>
+
+            </section>
+            <footer>
+                <p>Priserne er <span>ex.moms</span> og afgifter</p>
+                <p>Du vises lige priserne for <span>${Øst Danmark}</span></p>
+            </footer>
+    </main>
+
+</body>
+
+</html>

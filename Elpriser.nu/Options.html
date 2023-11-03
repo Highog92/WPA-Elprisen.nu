@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Options</title>
     <link rel="stylesheet" href="/Elpriser.nu/CSS/Main.css">
+    <link rel="stylesheet" href="/Elpriser.nu/CSS/Options.css">
+    <link rel="manifest" href="/Manifest.json">
+
 </head>
+
 <body>
     <header>
         <nav>
@@ -14,8 +19,8 @@
                 <img src="/Elpriser.nu/Assets/mainIcon.svg" alt="Logo">
             </a>
             <ul>
-                <li><a href="/Elpriser.nu/Overview.html">Oversigt</a></li>
                 <li><a href="/Elpriser.nu/index.html">Lige Nu</a></li>
+                <li><a href="/Elpriser.nu/Overview.html">Oversigt</a></li>
                 <li><a href="/Elpriser.nu/Historik.html">Historik</a></li>
             </ul>
         </nav>
@@ -23,12 +28,36 @@
 
     <main>
         <div>
-            <a href="/Elpriser.nu/Options.html">
-                <img src="/Elpriser.nu/Assets/OptionGear.svg" alt="Options">
-            </a>
+            <h2>Indstillinger</h2>
         </div>
+        <section>
 
-        
+
+            <div class="toggles">
+                <p>Priser inkl. Moms</p>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="toggles">
+                <p>Laveste pris alarm</p>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="chooseRegion">
+                <p>Vælg Region</p>
+                <select name="choose region" id="regions">
+                    <option value="region east">Region Øst</option>
+                    <option value="region west">Region Vest</option>
+                </select>
+            </div>
+
+        </section>
+
+
     </main>
 
     <footer>
@@ -36,4 +65,5 @@
         <p>Du vises lige priserne for <span>Øst Danmark</span></p>
     </footer>
 </body>
+
 </html>

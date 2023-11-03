@@ -8,17 +8,18 @@
     <title>Historik</title>
     <link rel="stylesheet" href="/Elpriser.nu/CSS/Main.css">
     <link rel="stylesheet" href="/Elpriser.nu/CSS/Historik.css">
+    <!-- <link rel="stylesheet" href="/Elpriser.nu/CSS/Overview.css"> -->
+    <link rel="manifest" href="/Manifest.json">
     <script src="/Elpriser.nu/Javascript/Historik.js" type="module" defer></script>
+    <link rel="stylesheet" href="/Elpriser.nu/Javascript/Index.js">
 </head>
 
 <body>
     <header>
         <nav>
-            <ul>
-                <a href="/Elpriser.nu/index.html">
-                    <img src="/Elpriser.nu/Assets/mainIcon.svg" alt="Logo">
-                </a>
-            </ul>
+            <a href="/Elpriser.nu/index.html">
+                <img src="/Elpriser.nu/Assets/mainIcon.svg" alt="Logo">
+            </a>
             <ul>
                 <li><a href="/Elpriser.nu/index.html">Lige Nu</a></li>
                 <li><a href="/Elpriser.nu/Overview.html">Oversigt</a></li>
@@ -26,7 +27,6 @@
             </ul>
         </nav>
     </header>
-
     <main>
         <div class="optionGear">
             <a href="/Elpriser.nu/Options.html">
@@ -42,15 +42,17 @@
                 <p>${dato}</p>
                 <input type="date">
             </div>
-            <p>Priser ${dato}</p>
-            <div class="historyBars">
-                <p>
-                    kl. 19.00
-                </p>
-                <p>
-                    0.524 kr
-                </p>
+            <div>
+                <p>Elpriserne D. ${dato}</p>
             </div>
+            <!-- <div class="historyBars"> -->
+            <!-- <p>
+                    ${klokkeslæt}
+                </p>
+                <p>
+                    ${tidligere pris}
+                </p> -->
+            <!-- </div> -->
         </section>
 
     </main>

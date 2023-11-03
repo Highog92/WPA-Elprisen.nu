@@ -1,6 +1,12 @@
 import { useFetch } from "./ElprisFetch/Elpris_fetch.js";
 
 
+// Service worker
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('../../sw.js')
+        .then(reg => console.log('service worker registered', reg))
+        .catch(err => console.error('service worker not registred'))
+}
 
 // For måneden
 const getMonth = () => {
@@ -75,13 +81,8 @@ async function getIndexData() {
     // style = "${priceColors(item.DKK_per_kWh)}"
 
 
-
-
-
 let timePeriodStart = document.querySelector('.timePeriod span')
 timePeriodStart.innerHTML = `${data[hour].time_start.slice(11, 16)} - ${data[hour].time_end.slice(11, 16)}`
-
-
 
 
 console.log(data);
