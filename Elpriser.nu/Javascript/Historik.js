@@ -1,5 +1,5 @@
 import { useFetch } from "./ElprisFetch/Elpris_fetch.js";
-
+window._myEventListner = { updateDate };
 
 const getMonth = () => {
     let month = new Date().getMonth() + 1
@@ -46,27 +46,27 @@ let priceColors = (price) => {
     } else if (price <= 0.900) {
 
         return `color: #FF5700;`
-    } else if (price >= 1.000) {
-
+    } else if (price <= 1.000) {
         return `color: #FF1900;`
-    }
 
+    } else if (price >= 1.000) {
+        return `color: #FF1900`
+    }
 }
 
-async function getHistoryData() {
+
+async function getHistoryData(year, month, day) {
 
     let hour = new Date().getHours()
-    let day = getDate()
-    let month = getMonth()
-    let year = new Date().getFullYear();
-    console.log(hour, day, month, year);
+    console.log(day, month, year);
 
-    let data = await useFetch(`https://www.elprisenligenu.dk/api/v1/prices/${year}/${month}-${day}_DK1.json`)
+    let data = await useFetch
+        (`https://www.elprisenligenu.dk/api/v1/prices/${year}/${month}-${day}_DK1.json`)
 
-    let history = document.querySelector('.historyPrices')
-
+    let history = document.querySelector('.historyBars')
+    history.innerHTML = ` `
+    
     data.map(item => {
-
         history.innerHTML += `
         <div class="historyBars">
         <p>
@@ -79,18 +79,22 @@ async function getHistoryData() {
         `
     })
 
-    // let lowestPrice = data.reduce((min, current) => (current.DKK_per_kWh < min.DKK_per_kWh ? current : min))
-    // let lowprice = document.querySelector('#lowPrice')
-    // lowprice.innerHTML = lowestPrice.DKK_per_kWh
-
-    // let highestPrice = data.reduce((max, current) => (current.DKK_per_kWh > max.DKK_per_kWh ? current : max))
-    // let hiPrice = document.querySelector('#hiPrice')
-    // hiPrice.innerHTML = highestPrice.DKK_per_kWh
-
-    // console.log("Højeste pris", highestPrice);
-    // console.log("Laveste pris", lowestPrice);
 
     console.log(data);
 }
 
-getHistoryData()
+let day = getDate()
+let month = getMonth()
+let year = new Date().getFullYear();
+
+getHistoryData(year, month, day)
+
+function updateDate(e) {
+    let selectedDate = e.target.value
+    console.log("Dato update", selectedDate);
+
+    getHistoryData(selectedDate.slice(0, 4), selectedDate.slice(5, 7), selectedDate.slice(8, 10))
+
+    document.getElementById("displayDate").textContent = selectedDate;
+    document.getElementById("displaySelectedDate").textContent = selectedDate;
+}

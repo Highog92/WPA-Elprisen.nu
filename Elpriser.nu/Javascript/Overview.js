@@ -47,13 +47,13 @@ let priceColors = (price) => {
     } else if (price <= 0.900) {
 
         return `color: #FF5700;`
-    } else if (price >= 1.000) {
-
+    } else if (price <= 1.000) {
         return `color: #FF1900;`
+
+    } else if (price >= 1.000) {
+        return `color: #FF1900`
     }
-
 }
-
 
 async function getOverviewData() {
 
@@ -81,15 +81,13 @@ async function getOverviewData() {
         `
     })
 
-    let lowestPrice = data.reduce((min, current) => (current.DKK_per_kWh < min.DKK_per_kWh ? current : min))
+    let lowestPrice = data.reduce((min, current) => (current.DKK_per_kWh < min.DKK_per_kWh ? current.toFixed(3) : min.toFixed(3)))
     let lowprice = document.querySelector('#lowPrice')
     lowprice.innerHTML = lowestPrice.DKK_per_kWh
 
-    let highestPrice = data.reduce((max, current) => (current.DKK_per_kWh > max.DKK_per_kWh ? current : max))
+    let highestPrice = data.reduce((max, current) => (current.DKK_per_kWh > max.DKK_per_kWh ? current.toFixed(3) : max.toFixed(3)))
     let hiPrice = document.querySelector('#hiPrice')
     hiPrice.innerHTML = highestPrice.DKK_per_kWh
-
-
 
     console.log("højeste pris", highestPrice);
     console.log("Laveste pris", lowestPrice);
