@@ -28,25 +28,32 @@
         </nav>
     </header>
     <main>
-        <div class="optionGear">
+        <section class="optionGear">
             <a href="./Options.html">
                 <img src="./Assets/OptionGear.svg" alt="Options">
             </a>
-        </div>
-        <div>
-            <h2>Historik</h2>
-        </div>
+        </section>
+
+        <section>
+            <div>
+                <h2>Historik</h2>
+            </div>
+        </section>
+        
         <section class="historyPrices">
 
             <div class="historyDate">
                 <p id="displayDate">${dato}</p>
                 <input type="date" id="dateInput" onchange="window._myEventListner.updateDate(event)">
             </div>
-            <div>
+            <div class="powerDate">
                 <p>Elpriserne D. <span id="displaySelectedDate">${dato}</span> </p>
             </div>
-            <div class="historyBars">
-            <!-- <p>
+        </section>
+            <section>
+
+                <div class="historyBars">
+                    <!-- <p>
                     ${klokkeslæt}
                 </p>
                 <p>

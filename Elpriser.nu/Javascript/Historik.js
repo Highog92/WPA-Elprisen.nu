@@ -69,14 +69,12 @@ async function getHistoryData(year, month, day) {
     
     data.map(item => {
         history.innerHTML += `
-        <div class="historydata">
         <p>
            kl. ${item.time_start.slice(11, 16)}
         </p>
         <p style="${priceColors(item.DKK_per_kWh)}">
             ${item.DKK_per_kWh.toFixed(3)} kr.
         </p>
-    </div>
         `
     })
 
