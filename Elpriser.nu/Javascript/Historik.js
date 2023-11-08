@@ -63,12 +63,13 @@ async function getHistoryData(year, month, day) {
     let data = await useFetch
         (`https://www.elprisenligenu.dk/api/v1/prices/${year}/${month}-${day}_DK1.json`)
 
+        // Dette tømmer .historyBars for info og udfylder den med nyt data når man vælger en ny dato
     let history = document.querySelector('.historyBars')
     history.innerHTML = ` `
     
     data.map(item => {
         history.innerHTML += `
-        <div class="historyBars">
+        <div class="historydata">
         <p>
            kl. ${item.time_start.slice(11, 16)}
         </p>
