@@ -8,7 +8,7 @@
     <title>Historik</title>
     <link rel="stylesheet" href="./CSS/Main.css">
     <link rel="stylesheet" href="./CSS/Historik.css">
-    <link rel="manifest" href="./Manifest.json">
+    <!-- <link rel="manifest" href="./Manifest.json"> -->
     <link rel="stylesheet" href="./Javascript/Index.js">
     <script src="./Javascript/Historik.js" type="module"></script>
     <!-- <script src="./Javascript/Getdate.js" defer></script> -->
@@ -39,27 +39,26 @@
                 <h2>Historik</h2>
             </div>
         </section>
-        
+
         <section class="historyPrices">
 
             <div class="historyDate">
-                <p id="displayDate">${dato}</p>
+                <p id="displayDate">Vælg en dato</p>
                 <input type="date" id="dateInput" onchange="window._myEventListner.updateDate(event)">
             </div>
             <div class="powerDate">
-                <p>Elpriserne D. <span id="displaySelectedDate">${dato}</span> </p>
+                <p>Elpriserne D. <span id="displaySelectedDate">...</span> </p>
             </div>
         </section>
-            <section>
-
-                <div class="historyBars">
-                    <!-- <p>
+        <section class="historyBars">
+            <!-- <div > -->
+            <!-- <p>
                     ${klokkeslæt}
                 </p>
                 <p>
                     ${tidligere pris}
                 </p> -->
-            </div>
+            <!-- </div> -->
         </section>
 
     </main>
