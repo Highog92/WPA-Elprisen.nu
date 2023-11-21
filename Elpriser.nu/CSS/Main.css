@@ -72,10 +72,6 @@ ul {
     padding: 30px;
 }
 
-li {
-    /* margin: 0; */
-    /* padding: 0; */
-}
 
 a {
     color: #EBEBEB;
@@ -87,6 +83,12 @@ a {
 a:hover {
     color: #55EC20;
 }
+
+a:active {
+    color: #55EC20;
+}
+
+
 
 #powerPrice,
 #time {
@@ -117,8 +119,4 @@ a:hover {
 }
 
 
-@media (min-width: 800px) {
-
-
-
-}
+@media (min-width: 800px) {}
